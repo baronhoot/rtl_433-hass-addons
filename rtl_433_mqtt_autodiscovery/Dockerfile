@@ -1,21 +1,15 @@
-ARG BUILD_FROM=homeassistant/amd64-base-python:3.9-alpine3.16
-FROM ${BUILD_FROM} as builder
+FROM homeassistant/amd64-base-python:3.9-alpine3.16
 
-ARG rtl433GitRevision=22.11
+# Copy files from root folder
+COPY run.sh /run.sh
+COPY rtl_433_mqtt_hass.py /rtl_433_mqtt_hass.py
 
-RUN wget https://raw.githubusercontent.com/merbanan/rtl_433/${rtl433GitRevision}/examples/rtl_433_mqtt_hass.py -O rtl_433_mqtt_hass.py
+RUN  pip install \
+    --no-cache-dir \
+    --prefer-binary \
+    paho-mqtt
 
-FROM ${BUILD_FROM}
+RUN chmod a+x /rtl_433_mqtt_hass.py
+RUN chmod a+x /run.sh
 
-COPY --from=builder rtl_433_mqtt_hass.py .
-COPY run.sh .
-
-RUN \
-    pip install \
-        --no-cache-dir \
-        --prefer-binary \
-        paho-mqtt \
-    \
-    && chmod a+x /run.sh
-
-CMD [ "/run.sh" ]
+ENTRYPOINT [ "/run.sh" ]
