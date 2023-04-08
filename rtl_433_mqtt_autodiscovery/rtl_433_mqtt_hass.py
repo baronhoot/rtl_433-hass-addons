@@ -6,8 +6,8 @@
 #
 # It has been modified to incorporate several changes not yet merged into that repo:
 # CHANGELOG:
-#  - https://github.com/pbkhrv/rtl_433/commit/29c04d8b412eb09f4cd1db4b363050d2d72e9065
-#  - https://github.com/pbkhrv/rtl_433/commit/4cf2f952c382d1f49b4bb11d9e0898463e621de0
+#  - https://github.com/baronhoot/rtl_433/commit/29c04d8b412eb09f4cd1db4b363050d2d72e9065
+#  - https://github.com/baronhoot/rtl_433/commit/4cf2f952c382d1f49b4bb11d9e0898463e621de0
 #  - https://github.com/merbanan/rtl_433/pull/1665/files (time only)
 #  - https://github.com/merbanan/rtl_433/pull/1584/files
 

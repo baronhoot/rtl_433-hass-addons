@@ -13,7 +13,7 @@ This is a collection of Home Assistant add-ons that work with [rtl_433](https://
 
 ## Release Process
 
-* The [next](https://github.com/pbkhrv/rtl_433-hass-addons/tree/next) branch represents the upcoming version of these addons.
+* The [next](https://github.com/baronhoot/rtl_433-hass-addons/tree/next) branch represents the upcoming version of these addons.
 * [rtl_433/config.json](rtl_433/config.json) and [rtl_433_mqtt_autodiscovery/config.json](rtl_433_mqtt_autodiscovery/config.json) will contain the version numbers of the previously set addon versions, but will have different code.
 * When `next` is ready to be tagged for a release:
   1. Create a pull request against `main`, bumping the versions of each `config.json` file if the individual addon has been changed. As well, update the `CHANGELOG.md` in the same pull request.
