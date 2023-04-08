@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.16
+ARG BUILD_FROM=ghcr.io/home-assistant/aarch64-base:3.16
 FROM $BUILD_FROM as builder
 MAINTAINER pbkhrv@pm.me
 
@@ -14,11 +14,11 @@ RUN apk add --no-cache --virtual .buildDeps \
 
 WORKDIR /build
 
-RUN git clone https://github.com/merbanan/rtl_433
+RUN git clone https://github.com/baronhoot/rtl_433
 WORKDIR ./rtl_433
 
 # Build a specific commit or tag.
-ARG rtl433GitRevision=22.11
+ARG rtl433GitRevision=23.04-bh
 RUN git checkout ${rtl433GitRevision}
 WORKDIR ./build
 RUN cmake ..

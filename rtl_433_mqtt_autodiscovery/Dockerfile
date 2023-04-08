@@ -1,4 +1,4 @@
-FROM homeassistant/amd64-base-python:3.9-alpine3.16
+FROM homeassistant/aarch64-base-python:3.9-alpine3.16
 
 # Copy files from root folder
 COPY run.sh /run.sh
