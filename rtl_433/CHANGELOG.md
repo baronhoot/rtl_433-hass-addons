@@ -1,3 +1,7 @@
+## [0.4.4] - 2023-09-23
+
+* Weather WS90 fixes for rainfall, supercap, data
+
 ## [0.4.2] - 2023-04-07
 
 * Weather
