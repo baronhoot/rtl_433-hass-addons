@@ -1,3 +1,7 @@
+## [0.4.5] - 2023-09-23
+
+* Revert change back to string id for WS90
+
 ## [0.4.4] - 2023-09-23
 
 * Weather WS90 fixes for rainfall, supercap, data
